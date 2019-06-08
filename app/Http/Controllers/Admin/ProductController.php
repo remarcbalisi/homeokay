@@ -38,4 +38,11 @@ class ProductController extends Controller
             'success' => 'Successfully added ' . $new_product->name,
         ]);
     }
+
+    public function list() {
+        $products = Product::get();
+        return view('admin.product.list')->with([
+            'products' => $products,
+        ]);
+    }
 }

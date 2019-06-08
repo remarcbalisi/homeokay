@@ -17,7 +17,9 @@
                         <li>
                             <a href="{{route('admin.product.create')}}">Add</a>
                         </li>
-                        <li>List</li>
+                        <li>
+                            <a href="{{route('admin.product.list')}}">List</a>
+                        </li>
                     </ul>
                 </li>
                 <li>Users</li>
