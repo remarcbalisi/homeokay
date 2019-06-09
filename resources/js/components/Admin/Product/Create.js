@@ -8,15 +8,17 @@ const createOption = (label) => ({
 });
 
 const defaultOptions = [
-    createOption('One'),
-    createOption('Two'),
-    createOption('Three'),
+    createOption('Home'),
+    createOption('Kitchen'),
+    createOption('Garden'),
 ];
 
 export default class AdminCreateProduct extends Component {
     constructor(props) {
         super(props);
         this.csrf_token = $('meta[name="csrf-token"]').attr('content');
+        this.getTags();
+
         this.state = {
             isLoading: false,
             options: defaultOptions,
@@ -46,6 +48,14 @@ export default class AdminCreateProduct extends Component {
                 });
             }, 1000);
         };
+    }
+
+    getTags() {
+        axios.get('/admin/json/tag/list').then(response=>{
+            response.data.data.map((value, index) => {
+                this.handleCreate(value.label);
+            })
+        });
     }
 
     render() {

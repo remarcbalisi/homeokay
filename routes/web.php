@@ -20,6 +20,8 @@ Route::name('admin.')->prefix('admin')->middleware(['auth', 'check_role:admin'])
 
     //JSON RESPONSES
     Route::post('json/product/list', 'API\Admin\ProductController@list');
+
+    Route::get('json/tag/list', 'API\Admin\TagController@list');
 });
 
 Auth::routes();

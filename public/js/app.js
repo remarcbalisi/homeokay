@@ -70341,7 +70341,7 @@ var createOption = function createOption(label) {
   };
 };
 
-var defaultOptions = [createOption('One'), createOption('Two'), createOption('Three')];
+var defaultOptions = [createOption('Home'), createOption('Kitchen'), createOption('Garden')];
 
 var AdminCreateProduct =
 /*#__PURE__*/
@@ -70355,6 +70355,9 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(AdminCreateProduct).call(this, props));
     _this.csrf_token = $('meta[name="csrf-token"]').attr('content');
+
+    _this.getTags();
+
     _this.state = {
       isLoading: false,
       options: defaultOptions,
@@ -70398,6 +70401,17 @@ function (_Component) {
   }
 
   _createClass(AdminCreateProduct, [{
+    key: "getTags",
+    value: function getTags() {
+      var _this2 = this;
+
+      axios.get('/admin/json/tag/list').then(function (response) {
+        response.data.data.map(function (value, index) {
+          _this2.handleCreate(value.label);
+        });
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
