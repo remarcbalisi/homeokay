@@ -70428,7 +70428,7 @@ function (_Component) {
       }, "Description"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
         className: "form-control",
         id: "description",
-        name: "descrition",
+        name: "description",
         placeholder: "Description",
         rows: "3"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -70556,7 +70556,9 @@ function (_Component) {
           key: val.id
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
           scope: "row"
-        }, val.id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, val.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, val.slug));
+        }, val.id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          href: '/admin/product/view/' + val.slug
+        }, val.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, val.slug));
       })));
     }
   }, {
@@ -70653,6 +70655,17 @@ if (document.getElementById('example')) {
 
 /***/ }),
 
+/***/ "./resources/sass/admin.scss":
+/*!***********************************!*\
+  !*** ./resources/sass/admin.scss ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/app.scss":
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
@@ -70665,14 +70678,15 @@ if (document.getElementById('example')) {
 /***/ }),
 
 /***/ 0:
-/*!*************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
-  \*************************************************************/
+/*!*****************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/admin.scss ***!
+  \*****************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! C:\xampp\htdocs\homeokay\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\homeokay\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\homeokay\resources\sass\app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\homeokay\resources\sass\admin.scss */"./resources/sass/admin.scss");
 
 
 /***/ })

@@ -59,7 +59,7 @@ export default class AdminCreateProduct extends Component {
                 </div>
                 <div className="form-group">
                     <label htmlFor="description">Description</label>
-                    <textarea className="form-control" id="description" name="descrition" placeholder="Description" rows="3"></textarea>
+                    <textarea className="form-control" id="description" name="description" placeholder="Description" rows="3"></textarea>
                 </div>
                 <div className="form-group">
                     <label htmlFor="tags">Tags</label>

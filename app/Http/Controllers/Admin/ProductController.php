@@ -30,6 +30,7 @@ class ProductController extends Controller
 
         $new_product = new Product;
         $new_product->name = $request->name;
+        $new_product->description = $request->description;
         $new_product->slug = strtolower(str_replace(" ", "-", $request->name));
         $new_product->tags = $request->tags;
         $new_product->save();
@@ -43,6 +44,12 @@ class ProductController extends Controller
         $products = Product::get();
         return view('admin.product.list')->with([
             'products' => $products,
+        ]);
+    }
+
+    public function view($product_slug) {
+        return view('admin.product.view')->with([
+            'product' => Product::where('slug', $product_slug)->first(),
         ]);
     }
 }

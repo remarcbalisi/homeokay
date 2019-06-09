@@ -41,7 +41,9 @@ export default class AdminProductList extends Component {
                             return (
                                 <tr key={val.id}>
                                     <th scope="row">{val.id}</th>
-                                    <td>{val.name}</td>
+                                    <td><a href={ '/admin/product/view/' + val.slug }>
+                                        {val.name}
+                                    </a></td>
                                     <td>{val.slug}</td>
                                 </tr>
                             );
