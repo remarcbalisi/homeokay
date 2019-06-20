@@ -70464,8 +70464,8 @@ function (_Component) {
         isMulti: true
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "submit",
-        className: "btn btn-primary"
-      }, "Submit"));
+        className: "btn btn-primary btn-sm"
+      }, "Create"));
     }
   }]);
 

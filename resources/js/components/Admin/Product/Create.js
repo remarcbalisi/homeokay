@@ -86,7 +86,7 @@ export default class AdminCreateProduct extends Component {
                     />
                 </div>
 
-                <button type="submit" className="btn btn-primary">Submit</button>
+                <button type="submit" className="btn btn-primary btn-sm">Create</button>
             </form>
         );
     }
